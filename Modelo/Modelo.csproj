@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{45C5E8D7-9ACD-4BB5-831F-BF54EB31AFF2}</ProjectGuid>
+    <ProjectGuid>{EC24E41A-4B1B-45DE-997F-2B731B2D31EB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Proyectores</RootNamespace>
-    <AssemblyName>Proyectores</AssemblyName>
+    <RootNamespace>Modelo</RootNamespace>
+    <AssemblyName>Modelo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -41,6 +41,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,27 +54,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Principal.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Model\Localidades.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
+    <Compile Include="Model\Personas.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Proyectores\LocalidadForm.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Model\Prestamos.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Proyectores\LocalidadForm.Designer.cs">
-      <DependentUpon>LocalidadForm.cs</DependentUpon>
+    <Compile Include="Model\Proyectores.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\Entities\PersonasEntity.cs" />
+    <Compile Include="Model\ProyectoresModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoresModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProyectoresModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProyectoresModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Reserva.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Salones.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipos_Persona.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipo_Documento.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Proyectores\LocalidadForm.resx">
-      <DependentUpon>LocalidadForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -82,13 +104,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ConnectionString.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
+    <EntityDeploy Include="Model\ProyectoresModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProyectoresModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\ProyectoresModel.edmx.diagram">
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
     </None>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,19 +123,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Modelo\Modelo.csproj">
-      <Project>{ec24e41a-4b1b-45de-997f-2b731b2d31eb}</Project>
-      <Name>Modelo</Name>
-    </ProjectReference>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Components\" />
+    <Content Include="Model\ProyectoresModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
+      <LastGenOutput>ProyectoresModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ProyectoresModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
+      <LastGenOutput>ProyectoresModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
