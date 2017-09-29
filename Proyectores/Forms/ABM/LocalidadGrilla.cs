@@ -49,7 +49,7 @@ namespace Proyectores.Forms.ABM {
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e) {
-            SelectedID = dataGridView1.SelectedCells[0].Value();
+            //SelectedID = dataGridView1.SelectedCells[0].Value();
                 
                 
                 }
