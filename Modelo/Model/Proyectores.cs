@@ -20,5 +20,6 @@ namespace Modelo.Model
         public decimal HDMI { get; set; }
         public string MODELO { get; set; }
         public decimal DISPONIBLE { get; set; }
+        public decimal OPERATIVO { get; set; }
     }
 }

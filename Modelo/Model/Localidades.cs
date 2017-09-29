@@ -17,6 +17,7 @@ namespace Modelo.Model
         public decimal ID { get; set; }
         public decimal COD_POSTAL { get; set; }
         public string NOMBRE { get; set; }
-
+        public Nullable<decimal> ID_PROVINCIA { get; set; }
+        public Nullable<decimal> COD_AREA_TEL { get; set; }
     }
 }

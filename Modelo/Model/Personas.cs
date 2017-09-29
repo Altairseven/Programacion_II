@@ -26,5 +26,6 @@ namespace Modelo.Model
         public string EMAIL { get; set; }
         public Nullable<decimal> ID_TIPO_PERSONA { get; set; }
         public string LEGAJO { get; set; }
+        public Nullable<System.DateTime> FECHA_NACIMIENTO { get; set; }
     }
 }

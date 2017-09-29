@@ -12,6 +12,8 @@
           <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="COD_POSTAL" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="NOMBRE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_PROVINCIA" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="COD_AREA_TEL" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="Personas">
           <Key>
@@ -29,6 +31,7 @@
           <Property Name="EMAIL" Type="nvarchar" MaxLength="70" />
           <Property Name="ID_TIPO_PERSONA" Type="decimal" Precision="2" Scale="0" />
           <Property Name="LEGAJO" Type="nvarchar" MaxLength="50" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" />
         </EntityType>
         <EntityType Name="Prestamos">
           <Key>
@@ -51,6 +54,7 @@
           <Property Name="HDMI" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="MODELO" Type="nvarchar" MaxLength="50" />
           <Property Name="DISPONIBLE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="OPERATIVO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="Reserva">
           <Key>
@@ -107,6 +111,8 @@
           <Property Name="ID" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" Type="Decimal" />
           <Property Name="COD_POSTAL" Nullable="false" Precision="18" Scale="0" Type="Decimal" />
           <Property Name="NOMBRE" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ID_PROVINCIA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="COD_AREA_TEL" Type="Decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="Tipo_Documento">
           <Key>
@@ -141,6 +147,7 @@
           <Property Name="EMAIL" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
           <Property Name="ID_TIPO_PERSONA" Type="Decimal" Precision="2" Scale="0" />
           <Property Name="LEGAJO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="3" />
         </EntityType>
         <EntityType Name="Prestamos">
           <Key>
@@ -163,6 +170,7 @@
           <Property Name="HDMI" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="MODELO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DISPONIBLE" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="OPERATIVO" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="Reserva">
           <Key>
@@ -200,6 +208,8 @@
           <EntitySetMapping Name="Localidades">
             <EntityTypeMapping TypeName="ProyectoresModel.Localidades">
               <MappingFragment StoreEntitySet="Localidades">
+                <ScalarProperty Name="COD_AREA_TEL" ColumnName="COD_AREA_TEL" />
+                <ScalarProperty Name="ID_PROVINCIA" ColumnName="ID_PROVINCIA" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="COD_POSTAL" ColumnName="COD_POSTAL" />
                 <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
@@ -217,6 +227,7 @@
           <EntitySetMapping Name="Personas">
             <EntityTypeMapping TypeName="ProyectoresModel.Personas">
               <MappingFragment StoreEntitySet="Personas">
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
                 <ScalarProperty Name="LEGAJO" ColumnName="LEGAJO" />
                 <ScalarProperty Name="ID_TIPO_PERSONA" ColumnName="ID_TIPO_PERSONA" />
                 <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
@@ -247,6 +258,7 @@
           <EntitySetMapping Name="Proyectores">
             <EntityTypeMapping TypeName="ProyectoresModel.Proyectores">
               <MappingFragment StoreEntitySet="Proyectores">
+                <ScalarProperty Name="OPERATIVO" ColumnName="OPERATIVO" />
                 <ScalarProperty Name="DISPONIBLE" ColumnName="DISPONIBLE" />
                 <ScalarProperty Name="MODELO" ColumnName="MODELO" />
                 <ScalarProperty Name="HDMI" ColumnName="HDMI" />
