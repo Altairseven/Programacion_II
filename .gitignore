@@ -31,7 +31,8 @@ bld/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
-ConnectionString.config
+Proyectores/ConnectionString.config
+Modelo/ConnectionString.config
 
 # NUNIT
 *.VisualState.xml
