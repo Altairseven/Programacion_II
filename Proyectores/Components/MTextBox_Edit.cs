@@ -28,5 +28,8 @@ namespace Proyectores.Components {
                 //this.SelectionLength = this.Text.Length;
         }
 
+        private void MTextBox_Edit_Click(object sender, EventArgs e) {
+            this.Focus();
+        }
     }
 }

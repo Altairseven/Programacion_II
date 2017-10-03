@@ -25,7 +25,6 @@ namespace Modelo.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Localidades> Localidades { get; set; }
         public virtual DbSet<Tipo_Documento> Tipo_Documento { get; set; }
         public virtual DbSet<Personas> Personas { get; set; }
         public virtual DbSet<Prestamos> Prestamos { get; set; }
@@ -33,5 +32,7 @@ namespace Modelo.Model
         public virtual DbSet<Reserva> Reserva { get; set; }
         public virtual DbSet<Salones> Salones { get; set; }
         public virtual DbSet<Tipos_Persona> Tipos_Persona { get; set; }
+        public virtual DbSet<Provincias> Provincias { get; set; }
+        public virtual DbSet<Localidades> Localidades { get; set; }
     }
 }

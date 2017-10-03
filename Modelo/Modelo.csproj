@@ -78,6 +78,9 @@
     <Compile Include="Model\Prestamos.cs">
       <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Provincias.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Proyectores.cs">
       <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
@@ -144,13 +147,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="db\Proyectores.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="db\Proyectores_log.ldf">
-      <DependentUpon>Proyectores.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Model\ProyectoresModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProyectoresModel.edmx</DependentUpon>

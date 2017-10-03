@@ -23,12 +23,14 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            components = new System.ComponentModel.Container();
-
-            //Llamadas a eventos:
-
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keydownevent);
+            this.SuspendLayout();
+            // 
+            // MTextBox_Edit
+            // 
+            this.Click += new System.EventHandler(this.MTextBox_Edit_Click);
             this.Enter += new System.EventHandler(this.OnEnter);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.keydownevent);
+            this.ResumeLayout(false);
 
         }
 
