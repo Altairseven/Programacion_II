@@ -94,6 +94,18 @@
     <Compile Include="Components\MTextBox_Edit.Designer.cs">
       <DependentUpon>MTextBox_Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ABM\PersonasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\PersonasForm.Designer.cs">
+      <DependentUpon>PersonasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ABM\PersonasGrilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\PersonasGrilla.Designer.cs">
+      <DependentUpon>PersonasGrilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ABM\test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,12 @@
     <EmbeddedResource Include="Components\MTextBox_Edit.resx">
       <DependentUpon>MTextBox_Edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\PersonasForm.resx">
+      <DependentUpon>PersonasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\PersonasGrilla.resx">
+      <DependentUpon>PersonasGrilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +176,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\Proyectores.Model.Entities.LocalidadesEntity.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Model.Entities.PersonasEntity.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -193,7 +212,7 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

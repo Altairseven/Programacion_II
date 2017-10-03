@@ -27,7 +27,7 @@ namespace Proyectores.Forms.ABM {
 
 
         //este metodo va a manejar tanto la obtencion de datos desde la tabla, como la busqueda en los mismo
-        public void GetData() {
+        public void GetData(){
             //Inicializamos la lista como lista nueva
              List = new List<LocalidadesEntity>();
 
