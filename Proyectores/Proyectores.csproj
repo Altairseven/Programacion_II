@@ -194,6 +194,8 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\DataSources\Modelo.Model.Tipos_Persona.datasource" />
+    <None Include="Properties\DataSources\Modelo.Model.Tipo_Documento.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.LocalidadesEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.PersonasEntity.datasource" />
     <None Include="Properties\Settings.settings">

@@ -83,6 +83,11 @@ namespace Proyectores.Forms.ABM
         {
 
         }
+
+        private void AgregarBT_Click(object sender, EventArgs e) {
+            //Remover, lo puse para testiar uan cosa:
+            new PersonasForm().Show();
+        }
     }
 
        

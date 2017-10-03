@@ -26,19 +26,24 @@ namespace Proyectores.Forms {
             treeView1.SendToBack();
             treeView1.ExpandAll();
             int test = tabControl1.TabPages.Count;
-
+            tabControl1.Hide();
+            TabCloseBT.Hide();
         }
 
         private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e) {
-            if (e.Node.Name == "Localidades") {
-                OpenTab("Proyectores.Forms.ABM.LocalidadGrilla");
+            switch (e.Node.Name) {
+                case "Localidades":
+                    OpenTab("Proyectores.Forms.ABM.LocalidadGrilla");
+                    break;
+                case "Proyectores":
+                    OpenTab("Proyectores.Forms.ABM.ProyectoresGrilla");
+                    break;
+                case "Personas":
+                    OpenTab("Proyectores.Forms.ABM.PersonasGrilla");
+                    break;
+                default:
+                    break;
             }
-            if (e.Node.Name == "Proyectores") {
-                OpenTab("Proyectores.Forms.ABM.ProyectoresGrilla");
-            }
-
-
-
         }
 
         private void OpenTab(string TipoFormulario) {
