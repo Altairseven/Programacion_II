@@ -33,6 +33,12 @@ namespace Proyectores.Forms {
             if (e.Node.Name == "Localidades") {
                 OpenTab("Proyectores.Forms.ABM.LocalidadGrilla");
             }
+            if (e.Node.Name == "Proyectores") {
+                OpenTab("Proyectores.Forms.ABM.ProyectoresGrilla");
+            }
+
+
+
         }
 
         private void OpenTab(string TipoFormulario) {

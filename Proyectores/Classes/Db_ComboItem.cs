@@ -9,5 +9,13 @@ namespace Proyectores.Classes {
         public decimal ID { get; set; }
         public string Text { get; set; }
 
+        public Db_ComboItem() {
+
+        }
+
+        public Db_ComboItem(decimal _id, string _text) {
+            ID = _id;
+            Text = _text;
+        }
     }
 }

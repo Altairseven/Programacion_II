@@ -106,6 +106,18 @@
     <Compile Include="Forms\ABM\PersonasGrilla.Designer.cs">
       <DependentUpon>PersonasGrilla.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ABM\ProyectoresForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\ProyectoresForm.Designer.cs">
+      <DependentUpon>ProyectoresForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ABM\ProyectoresGrilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\ProyectoresGrilla.Designer.cs">
+      <DependentUpon>ProyectoresGrilla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ABM\test.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +144,7 @@
     </Compile>
     <Compile Include="Model\Entities\LocalidadesEntity.cs" />
     <Compile Include="Model\Entities\PersonasEntity.cs" />
+    <Compile Include="Model\Entities\ProyectoresEntity.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Components\DB_ComboBox.resx">
@@ -145,6 +158,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\PersonasGrilla.resx">
       <DependentUpon>PersonasGrilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\ProyectoresForm.resx">
+      <DependentUpon>ProyectoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\ProyectoresGrilla.resx">
+      <DependentUpon>ProyectoresGrilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\test.resx">
       <DependentUpon>test.cs</DependentUpon>

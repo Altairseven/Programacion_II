@@ -26,13 +26,15 @@
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Personas");
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Reservas");
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Prestamos Actuales");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Principal", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Proyectores");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Principal", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
-            treeNode3});
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Localidades");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Ajustes", new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            treeNode3,
+            treeNode4});
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Localidades");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Ajustes", new System.Windows.Forms.TreeNode[] {
+            treeNode6});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -80,15 +82,17 @@
             treeNode2.Text = "Reservas";
             treeNode3.Name = "PrestamosActivos";
             treeNode3.Text = "Prestamos Actuales";
-            treeNode4.Name = "Principal";
-            treeNode4.Text = "Principal";
-            treeNode5.Name = "Localidades";
-            treeNode5.Text = "Localidades";
-            treeNode6.Name = "Ajustes";
-            treeNode6.Text = "Ajustes";
+            treeNode4.Name = "Proyectores";
+            treeNode4.Text = "Proyectores";
+            treeNode5.Name = "Principal";
+            treeNode5.Text = "Principal";
+            treeNode6.Name = "Localidades";
+            treeNode6.Text = "Localidades";
+            treeNode7.Name = "Ajustes";
+            treeNode7.Text = "Ajustes";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode6});
+            treeNode5,
+            treeNode7});
             this.treeView1.Size = new System.Drawing.Size(207, 508);
             this.treeView1.TabIndex = 2;
             this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
@@ -131,6 +135,7 @@
             // 
             // TabCloseBT
             // 
+            this.TabCloseBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TabCloseBT.Location = new System.Drawing.Point(1128, 0);
             this.TabCloseBT.Name = "TabCloseBT";
             this.TabCloseBT.Size = new System.Drawing.Size(59, 32);
