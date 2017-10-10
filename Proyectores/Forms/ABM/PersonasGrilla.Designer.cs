@@ -84,14 +84,15 @@
             this.locNombreDataGridViewTextBoxColumn,
             this.tIPOPERSONADataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.personasEntityBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 46);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1462, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(1282, 250);
             this.dataGridView1.TabIndex = 1;
             // 
             // iDDataGridViewTextBoxColumn
@@ -210,18 +211,19 @@
             // Search_TB
             // 
             this.Search_TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search_TB.Location = new System.Drawing.Point(1288, 5);
+            this.Search_TB.Location = new System.Drawing.Point(1128, 16);
+            this.Search_TB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Search_TB.Name = "Search_TB";
-            this.Search_TB.Size = new System.Drawing.Size(188, 26);
+            this.Search_TB.Size = new System.Drawing.Size(168, 22);
             this.Search_TB.TabIndex = 13;
             // 
             // Lb_Info
             // 
             this.Lb_Info.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Lb_Info.Location = new System.Drawing.Point(874, 357);
+            this.Lb_Info.Location = new System.Drawing.Point(760, 304);
             this.Lb_Info.Name = "Lb_Info";
             this.Lb_Info.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Lb_Info.Size = new System.Drawing.Size(604, 20);
+            this.Lb_Info.Size = new System.Drawing.Size(537, 24);
             this.Lb_Info.TabIndex = 9;
             this.Lb_Info.Text = "<Entries>";
             this.Lb_Info.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -230,18 +232,19 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1197, 9);
+            this.label1.Location = new System.Drawing.Point(1064, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Buscar:";
             // 
             // DelBT
             // 
             this.DelBT.Image = global::Proyectores.Properties.Resources.trashcan;
-            this.DelBT.Location = new System.Drawing.Point(284, 382);
+            this.DelBT.Location = new System.Drawing.Point(254, 304);
+            this.DelBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DelBT.Name = "DelBT";
-            this.DelBT.Size = new System.Drawing.Size(128, 48);
+            this.DelBT.Size = new System.Drawing.Size(114, 38);
             this.DelBT.TabIndex = 12;
             this.DelBT.Text = "Eliminar";
             this.DelBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -251,9 +254,10 @@
             // EditBT
             // 
             this.EditBT.Image = global::Proyectores.Properties.Resources.pencil;
-            this.EditBT.Location = new System.Drawing.Point(150, 382);
+            this.EditBT.Location = new System.Drawing.Point(135, 304);
+            this.EditBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditBT.Name = "EditBT";
-            this.EditBT.Size = new System.Drawing.Size(128, 48);
+            this.EditBT.Size = new System.Drawing.Size(114, 38);
             this.EditBT.TabIndex = 11;
             this.EditBT.Text = "Editar";
             this.EditBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -264,9 +268,10 @@
             // AgregarBT
             // 
             this.AgregarBT.Image = global::Proyectores.Properties.Resources.sign_add;
-            this.AgregarBT.Location = new System.Drawing.Point(16, 382);
+            this.AgregarBT.Location = new System.Drawing.Point(16, 304);
+            this.AgregarBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarBT.Name = "AgregarBT";
-            this.AgregarBT.Size = new System.Drawing.Size(128, 48);
+            this.AgregarBT.Size = new System.Drawing.Size(114, 38);
             this.AgregarBT.TabIndex = 10;
             this.AgregarBT.Text = "Agregar";
             this.AgregarBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -276,9 +281,9 @@
             // 
             // PersonasGrilla
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1512, 463);
+            this.ClientSize = new System.Drawing.Size(1313, 355);
             this.Controls.Add(this.Search_TB);
             this.Controls.Add(this.DelBT);
             this.Controls.Add(this.EditBT);
@@ -286,7 +291,7 @@
             this.Controls.Add(this.Lb_Info);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PersonasGrilla";
             this.Text = "PersonasGrilla";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

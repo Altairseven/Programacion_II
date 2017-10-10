@@ -13,8 +13,7 @@ using Modelo.Model;
 
 namespace Proyectores.Forms.ABM
 {
-    public partial class PersonasGrilla : Form
-    {
+    public partial class PersonasGrilla : Form {
         public PersonasGrilla()
 
         {
@@ -27,7 +26,7 @@ namespace Proyectores.Forms.ABM
             GetData();
         }
 
-        private void GetData()
+        public void GetData()
         {
             List=new List<PersonasEntity> ();
 

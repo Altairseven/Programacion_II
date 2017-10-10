@@ -40,38 +40,33 @@ namespace Proyectores.Forms.ABM {
             InitializeComponent();
             this.TopLevel = false;
             Grid = grid;
-            SetupComboBoxes();
+            
             BT_Primero.Hide();
             BT_Anterior.Hide();
             BT_Proximo.Hide();
             BT_Ultimo.Hide();
+            
         }
 
         public LocalidadForm(decimal ID, List<LocalidadesEntity> _list, LocalidadGrilla grid) {
             InitializeComponent();
             this.TopLevel = false;
             Grid = grid;
-            SetupComboBoxes();
             List = _list;
             SelectedIndex = List.FindIndex(x => x.ID == ID);
             EditMode = true;
+            
+            
         }
 
         private void LocalidadForm_Load(object sender, EventArgs e) {
-
+            SetupComboBoxes();
         }
 
         private void SetupComboBoxes() {
-            List<Classes.Db_ComboItem> List = new List<Classes.Db_ComboItem>();
-            foreach (Provincias prov in _db.Provincias) {
-                Classes.Db_ComboItem item = new Classes.Db_ComboItem();
-                item.ID = prov.ID;
-                item.Text = prov.Nombre;
-                List.Add(item);
-            }
-            dB_ComboBox1.DBItemList = List;
-
-
+            CB_Provincia.DataSource = _db.Provincias.ToList();
+            if (!EditMode) //en Modo Agregar, deja vacio el elemento seleccionado del combobox
+                CB_Provincia.SelectedValue = "";
         }
 
         private void FeedData() {
@@ -80,8 +75,7 @@ namespace Proyectores.Forms.ABM {
 
             mTextBox_Edit1.Text = Entity.COD_POSTAL.ToString();
             mTextBox_Edit2.Text = Entity.NOMBRE.ToString();
-            int pindex = dB_ComboBox1.DBItemList.FindIndex(x => x.ID == Entity.ID_PROVINCIA);
-            dB_ComboBox1.SelectedIndex = pindex;
+            CB_Provincia.SelectedValue = Entity.ID_PROVINCIA;
 
         }
 
@@ -93,7 +87,7 @@ namespace Proyectores.Forms.ABM {
                 MessageBox.Show("El Codigo Postal debe ser numerico.");
                 return;
             }
-            if (dB_ComboBox1.SelectedIndex == -1) {
+            if (CB_Provincia.SelectedIndex == -1) {
                 MessageBox.Show("Seleccione una provincia.");
                 return;
             }
@@ -124,7 +118,7 @@ namespace Proyectores.Forms.ABM {
 
                 Entity.COD_POSTAL = Convert.ToDecimal(mTextBox_Edit1.Text);
                 Entity.NOMBRE = mTextBox_Edit2.Text;
-                Entity.ID_PROVINCIA = dB_ComboBox1.SelectedID;
+                Entity.ID_PROVINCIA = CB_Provincia.SelectedIndex;
 
                 _db.SaveChanges();
 
@@ -144,7 +138,7 @@ namespace Proyectores.Forms.ABM {
 
                 Entity.COD_POSTAL = Convert.ToDecimal(mTextBox_Edit1.Text);
                 Entity.NOMBRE = mTextBox_Edit2.Text;
-                Entity.ID_PROVINCIA = dB_ComboBox1.SelectedID;
+                Entity.ID_PROVINCIA = CB_Provincia.SelectedIndex;
 
                 _db.Set<Localidades>().Add(Entity);
 
@@ -205,6 +199,8 @@ namespace Proyectores.Forms.ABM {
             BT_Ultimo.Enabled = true;
         }
 
-
+        private void CB_Provincia_Enter(object sender, EventArgs e) {
+            CB_Provincia.DroppedDown = true;
+        }
     }
 }

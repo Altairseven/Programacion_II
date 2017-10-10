@@ -31,37 +31,37 @@
             this.Lb_Info = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mODELODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sERIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hDMIDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dISPONIBLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oPERATIVODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hDMIstrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dISPONIBLEstrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.oPERATIVOstrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.proyectoresEntityBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.proyectoresEntityBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoresEntityBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoresEntityBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Search_TB
             // 
             this.Search_TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search_TB.Location = new System.Drawing.Point(988, 16);
+            this.Search_TB.Location = new System.Drawing.Point(883, 8);
+            this.Search_TB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Search_TB.Name = "Search_TB";
-            this.Search_TB.Size = new System.Drawing.Size(188, 26);
+            this.Search_TB.Size = new System.Drawing.Size(165, 22);
             this.Search_TB.TabIndex = 14;
             // 
             // DelBT
             // 
             this.DelBT.Image = global::Proyectores.Properties.Resources.trashcan;
-            this.DelBT.Location = new System.Drawing.Point(280, 392);
+            this.DelBT.Location = new System.Drawing.Point(258, 304);
+            this.DelBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DelBT.Name = "DelBT";
-            this.DelBT.Size = new System.Drawing.Size(128, 48);
+            this.DelBT.Size = new System.Drawing.Size(114, 38);
             this.DelBT.TabIndex = 13;
             this.DelBT.Text = "Eliminar";
             this.DelBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -71,9 +71,10 @@
             // EditBT
             // 
             this.EditBT.Image = global::Proyectores.Properties.Resources.pencil;
-            this.EditBT.Location = new System.Drawing.Point(144, 392);
+            this.EditBT.Location = new System.Drawing.Point(137, 304);
+            this.EditBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditBT.Name = "EditBT";
-            this.EditBT.Size = new System.Drawing.Size(128, 48);
+            this.EditBT.Size = new System.Drawing.Size(114, 38);
             this.EditBT.TabIndex = 12;
             this.EditBT.Text = "Editar";
             this.EditBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -83,9 +84,10 @@
             // AgregarBT
             // 
             this.AgregarBT.Image = global::Proyectores.Properties.Resources.sign_add;
-            this.AgregarBT.Location = new System.Drawing.Point(8, 392);
+            this.AgregarBT.Location = new System.Drawing.Point(16, 304);
+            this.AgregarBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarBT.Name = "AgregarBT";
-            this.AgregarBT.Size = new System.Drawing.Size(128, 48);
+            this.AgregarBT.Size = new System.Drawing.Size(114, 38);
             this.AgregarBT.TabIndex = 11;
             this.AgregarBT.Text = "Agregar";
             this.AgregarBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -96,10 +98,10 @@
             // Lb_Info
             // 
             this.Lb_Info.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Lb_Info.Location = new System.Drawing.Point(568, 384);
+            this.Lb_Info.Location = new System.Drawing.Point(512, 296);
             this.Lb_Info.Name = "Lb_Info";
             this.Lb_Info.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Lb_Info.Size = new System.Drawing.Size(605, 35);
+            this.Lb_Info.Size = new System.Drawing.Size(538, 28);
             this.Lb_Info.TabIndex = 10;
             this.Lb_Info.Text = "<Entries>";
             this.Lb_Info.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -108,9 +110,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(904, 20);
+            this.label1.Location = new System.Drawing.Point(817, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 9;
             this.label1.Text = "Buscar:";
             // 
@@ -126,117 +128,113 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDDataGridViewTextBoxColumn,
-            this.mARCADataGridViewTextBoxColumn,
-            this.mODELODataGridViewTextBoxColumn,
-            this.sERIALDataGridViewTextBoxColumn,
-            this.hDMIDataGridViewTextBoxColumn,
-            this.dISPONIBLEDataGridViewTextBoxColumn,
-            this.oPERATIVODataGridViewTextBoxColumn,
-            this.hDMIstrDataGridViewTextBoxColumn,
-            this.dISPONIBLEstrDataGridViewTextBoxColumn,
-            this.oPERATIVOstrDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.proyectoresEntityBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(8, 56);
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn10});
+            this.dataGridView1.DataSource = this.proyectoresEntityBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 40);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1160, 317);
+            this.dataGridView1.Size = new System.Drawing.Size(1032, 254);
             this.dataGridView1.TabIndex = 8;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // mARCADataGridViewTextBoxColumn
-            // 
-            this.mARCADataGridViewTextBoxColumn.DataPropertyName = "MARCA";
-            this.mARCADataGridViewTextBoxColumn.HeaderText = "Marca";
-            this.mARCADataGridViewTextBoxColumn.Name = "mARCADataGridViewTextBoxColumn";
-            this.mARCADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // mODELODataGridViewTextBoxColumn
-            // 
-            this.mODELODataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mODELODataGridViewTextBoxColumn.DataPropertyName = "MODELO";
-            this.mODELODataGridViewTextBoxColumn.HeaderText = "Modelo";
-            this.mODELODataGridViewTextBoxColumn.Name = "mODELODataGridViewTextBoxColumn";
-            this.mODELODataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sERIALDataGridViewTextBoxColumn
-            // 
-            this.sERIALDataGridViewTextBoxColumn.DataPropertyName = "SERIAL";
-            this.sERIALDataGridViewTextBoxColumn.HeaderText = "N° Serie";
-            this.sERIALDataGridViewTextBoxColumn.Name = "sERIALDataGridViewTextBoxColumn";
-            this.sERIALDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sERIALDataGridViewTextBoxColumn.Width = 350;
-            // 
-            // hDMIDataGridViewTextBoxColumn
-            // 
-            this.hDMIDataGridViewTextBoxColumn.DataPropertyName = "HDMI";
-            this.hDMIDataGridViewTextBoxColumn.HeaderText = "HDMI";
-            this.hDMIDataGridViewTextBoxColumn.Name = "hDMIDataGridViewTextBoxColumn";
-            this.hDMIDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hDMIDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dISPONIBLEDataGridViewTextBoxColumn
-            // 
-            this.dISPONIBLEDataGridViewTextBoxColumn.DataPropertyName = "DISPONIBLE";
-            this.dISPONIBLEDataGridViewTextBoxColumn.HeaderText = "DISPONIBLE";
-            this.dISPONIBLEDataGridViewTextBoxColumn.Name = "dISPONIBLEDataGridViewTextBoxColumn";
-            this.dISPONIBLEDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dISPONIBLEDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // oPERATIVODataGridViewTextBoxColumn
-            // 
-            this.oPERATIVODataGridViewTextBoxColumn.DataPropertyName = "OPERATIVO";
-            this.oPERATIVODataGridViewTextBoxColumn.HeaderText = "OPERATIVO";
-            this.oPERATIVODataGridViewTextBoxColumn.Name = "oPERATIVODataGridViewTextBoxColumn";
-            this.oPERATIVODataGridViewTextBoxColumn.ReadOnly = true;
-            this.oPERATIVODataGridViewTextBoxColumn.Visible = false;
-            // 
-            // hDMIstrDataGridViewTextBoxColumn
-            // 
-            this.hDMIstrDataGridViewTextBoxColumn.DataPropertyName = "HDMIstr";
-            this.hDMIstrDataGridViewTextBoxColumn.HeaderText = "Tiene Hdmi?";
-            this.hDMIstrDataGridViewTextBoxColumn.Name = "hDMIstrDataGridViewTextBoxColumn";
-            this.hDMIstrDataGridViewTextBoxColumn.ReadOnly = true;
-            this.hDMIstrDataGridViewTextBoxColumn.Width = 140;
-            // 
-            // dISPONIBLEstrDataGridViewTextBoxColumn
-            // 
-            this.dISPONIBLEstrDataGridViewTextBoxColumn.DataPropertyName = "DISPONIBLEstr";
-            this.dISPONIBLEstrDataGridViewTextBoxColumn.HeaderText = "Disponible";
-            this.dISPONIBLEstrDataGridViewTextBoxColumn.Name = "dISPONIBLEstrDataGridViewTextBoxColumn";
-            this.dISPONIBLEstrDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // oPERATIVOstrDataGridViewTextBoxColumn
-            // 
-            this.oPERATIVOstrDataGridViewTextBoxColumn.DataPropertyName = "OPERATIVOstr";
-            this.oPERATIVOstrDataGridViewTextBoxColumn.HeaderText = "Estado";
-            this.oPERATIVOstrDataGridViewTextBoxColumn.Name = "oPERATIVOstrDataGridViewTextBoxColumn";
-            this.oPERATIVOstrDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // proyectoresEntityBindingSource1
-            // 
-            this.proyectoresEntityBindingSource1.DataSource = typeof(Proyectores.Model.Entities.ProyectoresEntity);
             // 
             // proyectoresEntityBindingSource
             // 
             this.proyectoresEntityBindingSource.DataSource = typeof(Proyectores.Model.Entities.ProyectoresEntity);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "MARCA";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Marca";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "MODELO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Modelo";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SERIAL";
+            this.dataGridViewTextBoxColumn3.HeaderText = "N° Serie";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "HDMI";
+            this.dataGridViewTextBoxColumn4.HeaderText = "HDMI";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "HDMIstr";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Hdmi";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "DISPONIBLE";
+            this.dataGridViewTextBoxColumn6.HeaderText = "DISPONIBLE";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "DISPONIBLEstr";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Disponible";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "OPERATIVO";
+            this.dataGridViewTextBoxColumn7.HeaderText = "OPERATIVO";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "OPERATIVOstr";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 120;
+            // 
             // ProyectoresGrilla
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 455);
+            this.ClientSize = new System.Drawing.Size(1061, 364);
             this.Controls.Add(this.Search_TB);
             this.Controls.Add(this.DelBT);
             this.Controls.Add(this.EditBT);
@@ -244,11 +242,11 @@
             this.Controls.Add(this.Lb_Info);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProyectoresGrilla";
             this.Text = "ProyectoresGrilla";
             this.Load += new System.EventHandler(this.ProyectoresGrilla_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.proyectoresEntityBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoresEntityBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -264,7 +262,6 @@
         private System.Windows.Forms.Label Lb_Info;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource proyectoresEntityBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mARCADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mODELODataGridViewTextBoxColumn;
@@ -275,6 +272,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hDMIstrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dISPONIBLEstrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn oPERATIVOstrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource proyectoresEntityBindingSource1;
+        private System.Windows.Forms.BindingSource proyectoresEntityBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ProyectoresModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Localidades">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="COD_POSTAL" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_PROVINCIA" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Personas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDO" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_TIPO_DOCUMENTO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DOCUMENTO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="CUIT" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ID_LOCALIDAD" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DIRECCION" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TELEFONO" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="70" />
+          <Property Name="ID_TIPO_PERSONA" Type="decimal" Precision="2" Scale="0" />
+          <Property Name="LEGAJO" Type="nvarchar" MaxLength="50" />
+          <Property Name="FECHA_NACIMIENTO" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Prestamos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ID_PROYECTOR" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_SALON" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TIPO_PERSONA" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_PERSONAL" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_ALUMNO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Provincias">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Proyectores">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MARCA" Type="nvarchar" MaxLength="50" />
+          <Property Name="SERIAL" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="HDMI" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MODELO" Type="nvarchar" MaxLength="50" />
+          <Property Name="DISPONIBLE" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="OPERATIVO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Reserva">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FECHA" Type="datetime" Nullable="false" />
+          <Property Name="ID_SALON" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TIPO_PERSONA" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="ID_PERSONAL" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ID_ALUMNO" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="FECHA_CANCELACION" Type="datetime" />
+          <Property Name="FECHA_BAJA" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Salones">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Tipo_Documento">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Tipos_Persona">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="ProyectoresModelStoreContainer">
+          <EntitySet Name="Localidades" EntityType="Self.Localidades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personas" EntityType="Self.Personas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prestamos" EntityType="Self.Prestamos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provincias" EntityType="Self.Provincias" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Proyectores" EntityType="Self.Proyectores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reserva" EntityType="Self.Reserva" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Salones" EntityType="Self.Salones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tipo_Documento" EntityType="Self.Tipo_Documento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tipos_Persona" EntityType="Self.Tipos_Persona" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ProyectoresModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tipo_Documento">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ProyectoresModelEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tipo_Documento" EntityType="Self.Tipo_Documento" />
+          <EntitySet Name="Personas" EntityType="ProyectoresModel.Personas" />
+          <EntitySet Name="Prestamos" EntityType="ProyectoresModel.Prestamos" />
+          <EntitySet Name="Proyectores" EntityType="ProyectoresModel.Proyectores" />
+          <EntitySet Name="Reserva" EntityType="ProyectoresModel.Reserva" />
+          <EntitySet Name="Salones" EntityType="ProyectoresModel.Salones" />
+          <EntitySet Name="Tipos_Persona" EntityType="ProyectoresModel.Tipos_Persona" />
+          <EntitySet Name="Provincias" EntityType="ProyectoresModel.Provincias" />
+          <EntitySet Name="Localidades" EntityType="ProyectoresModel.Localidades" />
+        </EntityContainer>
+        <EntityType Name="Personas">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="APELLIDO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_TIPO_DOCUMENTO" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="DOCUMENTO" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="CUIT" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_LOCALIDAD" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="DIRECCION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TELEFONO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EMAIL" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="ID_TIPO_PERSONA" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="LEGAJO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Prestamos">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_PROYECTOR" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="ID_SALON" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="TIPO_PERSONA" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="ID_PERSONAL" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="ID_ALUMNO" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Proyectores">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MARCA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SERIAL" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HDMI" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="MODELO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DISPONIBLE" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="OPERATIVO" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="Reserva">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FECHA" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ID_SALON" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="TIPO_PERSONA" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="ID_PERSONAL" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ID_ALUMNO" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="FECHA_CANCELACION" Type="DateTime" Precision="3" />
+          <Property Name="FECHA_BAJA" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Salones">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Tipos_Persona">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Provincias">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Localidades">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="COD_POSTAL" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_PROVINCIA" Type="Decimal" Precision="18" Scale="0" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ProyectoresModelStoreContainer" CdmEntityContainer="ProyectoresModelEntities">
+          <EntitySetMapping Name="Tipo_Documento">
+            <EntityTypeMapping TypeName="ProyectoresModel.Tipo_Documento">
+              <MappingFragment StoreEntitySet="Tipo_Documento">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personas">
+            <EntityTypeMapping TypeName="ProyectoresModel.Personas">
+              <MappingFragment StoreEntitySet="Personas">
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="LEGAJO" ColumnName="LEGAJO" />
+                <ScalarProperty Name="ID_TIPO_PERSONA" ColumnName="ID_TIPO_PERSONA" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="ID_LOCALIDAD" ColumnName="ID_LOCALIDAD" />
+                <ScalarProperty Name="CUIT" ColumnName="CUIT" />
+                <ScalarProperty Name="DOCUMENTO" ColumnName="DOCUMENTO" />
+                <ScalarProperty Name="ID_TIPO_DOCUMENTO" ColumnName="ID_TIPO_DOCUMENTO" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prestamos">
+            <EntityTypeMapping TypeName="ProyectoresModel.Prestamos">
+              <MappingFragment StoreEntitySet="Prestamos">
+                <ScalarProperty Name="ID_ALUMNO" ColumnName="ID_ALUMNO" />
+                <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
+                <ScalarProperty Name="TIPO_PERSONA" ColumnName="TIPO_PERSONA" />
+                <ScalarProperty Name="ID_SALON" ColumnName="ID_SALON" />
+                <ScalarProperty Name="ID_PROYECTOR" ColumnName="ID_PROYECTOR" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Proyectores">
+            <EntityTypeMapping TypeName="ProyectoresModel.Proyectores">
+              <MappingFragment StoreEntitySet="Proyectores">
+                <ScalarProperty Name="OPERATIVO" ColumnName="OPERATIVO" />
+                <ScalarProperty Name="DISPONIBLE" ColumnName="DISPONIBLE" />
+                <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+                <ScalarProperty Name="HDMI" ColumnName="HDMI" />
+                <ScalarProperty Name="SERIAL" ColumnName="SERIAL" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reserva">
+            <EntityTypeMapping TypeName="ProyectoresModel.Reserva">
+              <MappingFragment StoreEntitySet="Reserva">
+                <ScalarProperty Name="FECHA_BAJA" ColumnName="FECHA_BAJA" />
+                <ScalarProperty Name="FECHA_CANCELACION" ColumnName="FECHA_CANCELACION" />
+                <ScalarProperty Name="ID_ALUMNO" ColumnName="ID_ALUMNO" />
+                <ScalarProperty Name="ID_PERSONAL" ColumnName="ID_PERSONAL" />
+                <ScalarProperty Name="TIPO_PERSONA" ColumnName="TIPO_PERSONA" />
+                <ScalarProperty Name="ID_SALON" ColumnName="ID_SALON" />
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Salones">
+            <EntityTypeMapping TypeName="ProyectoresModel.Salones">
+              <MappingFragment StoreEntitySet="Salones">
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipos_Persona">
+            <EntityTypeMapping TypeName="ProyectoresModel.Tipos_Persona">
+              <MappingFragment StoreEntitySet="Tipos_Persona">
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provincias">
+            <EntityTypeMapping TypeName="ProyectoresModel.Provincias">
+              <MappingFragment StoreEntitySet="Provincias">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Localidades">
+            <EntityTypeMapping TypeName="ProyectoresModel.Localidades">
+              <MappingFragment StoreEntitySet="Localidades">
+                <ScalarProperty Name="ID_PROVINCIA" ColumnName="ID_PROVINCIA" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="COD_POSTAL" ColumnName="COD_POSTAL" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

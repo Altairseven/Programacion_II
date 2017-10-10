@@ -144,7 +144,50 @@
     </Compile>
     <Compile Include="Model\Entities\LocalidadesEntity.cs" />
     <Compile Include="Model\Entities\PersonasEntity.cs" />
+    <Compile Include="Model\Entities\ProvinciasEntity.cs" />
     <Compile Include="Model\Entities\ProyectoresEntity.cs" />
+    <Compile Include="Model\Localidades.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Personas.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Prestamos.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Provincias.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Proyectores.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ProyectoresModel.Context.cs">
+      <DependentUpon>ProyectoresModel.Context.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Model\ProyectoresModel.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Model\ProyectoresModel.Designer.cs">
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Model\Reserva.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Salones.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipos_Persona.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tipo_Documento.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Components\DB_ComboBox.resx">
@@ -191,6 +234,13 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </None>
+    <EntityDeploy Include="Model\ProyectoresModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ProyectoresModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model\ProyectoresModel.edmx.diagram">
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -198,6 +248,8 @@
     <None Include="Properties\DataSources\Modelo.Model.Tipo_Documento.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.LocalidadesEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.PersonasEntity.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Model.Entities.ProvinciasEntity.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Model.Entities.ProyectoresEntity1.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -213,12 +265,6 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Modelo\Modelo.csproj">
-      <Project>{ec24e41a-4b1b-45de-997f-2b731b2d31eb}</Project>
-      <Name>Modelo</Name>
-    </ProjectReference>
-  </ItemGroup>
   <ItemGroup />
   <ItemGroup>
     <None Include="Resources\sign-add.png" />
@@ -227,6 +273,16 @@
     <Content Include="bin\Debug\db\Proyectores.mdf" />
     <Content Include="bin\Debug\db\Proyectores_log.ldf">
       <DependentUpon>Proyectores.mdf</DependentUpon>
+    </Content>
+    <Content Include="Model\ProyectoresModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
+      <LastGenOutput>ProyectoresModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\ProyectoresModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
+      <LastGenOutput>ProyectoresModel.cs</LastGenOutput>
     </Content>
     <Content Include="Symbol of the Gods.ico" />
   </ItemGroup>

@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proyectores", "Proyectores\Proyectores.csproj", "{45C5E8D7-9ACD-4BB5-831F-BF54EB31AFF2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modelo", "Modelo\Modelo.csproj", "{EC24E41A-4B1B-45DE-997F-2B731B2D31EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +15,11 @@ Global
 		{45C5E8D7-9ACD-4BB5-831F-BF54EB31AFF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45C5E8D7-9ACD-4BB5-831F-BF54EB31AFF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45C5E8D7-9ACD-4BB5-831F-BF54EB31AFF2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EC24E41A-4B1B-45DE-997F-2B731B2D31EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC24E41A-4B1B-45DE-997F-2B731B2D31EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC24E41A-4B1B-45DE-997F-2B731B2D31EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC24E41A-4B1B-45DE-997F-2B731B2D31EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB0EFAC3-E83F-478F-BDDC-1D2A90146FB7}
 	EndGlobalSection
 EndGlobal

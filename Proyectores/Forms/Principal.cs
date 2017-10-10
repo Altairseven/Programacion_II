@@ -12,6 +12,7 @@ using Proyectores.Model.Entities;
 using Proyectores.Forms.ABM;
 using System.Windows.Input;
 using System.Windows.Media;
+using Proyectores.Forms;
 
 namespace Proyectores.Forms {
     public partial class Principal : Form {
@@ -32,21 +33,29 @@ namespace Proyectores.Forms {
 
         private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e) {
             switch (e.Node.Name) {
-                case "Localidades":
-                    OpenTab("Proyectores.Forms.ABM.LocalidadGrilla");
+                case "Localidades": {
+                        LocalidadGrilla form = (LocalidadGrilla)OpenTab("Proyectores.Forms.ABM.LocalidadGrilla");
+                        form.GetData();
+                    }
                     break;
-                case "Proyectores":
-                    OpenTab("Proyectores.Forms.ABM.ProyectoresGrilla");
+                case "Proyectores": {
+                        ProyectoresGrilla form = (ProyectoresGrilla)OpenTab("Proyectores.Forms.ABM.ProyectoresGrilla");
+                        form.GetData();
+                    }
                     break;
-                case "Personas":
-                    OpenTab("Proyectores.Forms.ABM.PersonasGrilla");
+                case "Personas": {
+                        PersonasGrilla form = (PersonasGrilla)OpenTab("Proyectores.Forms.ABM.PersonasGrilla");
+                        form.GetData();
+                    }
                     break;
                 default:
                     break;
             }
+            
+            
         }
 
-        private void OpenTab(string TipoFormulario) {
+        private Form OpenTab(string TipoFormulario) {
             TabPage tab = new TabPage();
             tab.Text = treeView1.SelectedNode.Text;
             tabControl1.TabPages.Add(tab);
@@ -59,6 +68,7 @@ namespace Proyectores.Forms {
             form.Dock = DockStyle.Fill;
             form.Show();
             tabControl1.SelectedTab = tab;
+            return form;
         }
 
         private void tabControl1_TabIndexChanged(object sender, EventArgs e) {

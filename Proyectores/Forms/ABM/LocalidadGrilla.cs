@@ -11,7 +11,7 @@ using Proyectores.Model.Entities;
 using Modelo.Model;
 
 namespace Proyectores.Forms.ABM {
-    public partial class LocalidadGrilla : Form {
+    public partial class LocalidadGrilla : Form{
         public LocalidadGrilla() {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace Proyectores.Forms.ABM {
         private List<LocalidadesEntity> List;
 
         private void LocalidadGrilla_Load(object sender, EventArgs e) {
-            GetData();
+          //  GetData();
         }
 
 

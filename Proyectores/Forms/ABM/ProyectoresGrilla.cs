@@ -24,7 +24,7 @@ namespace Proyectores.Forms.ABM {
 
 
         private void ProyectoresGrilla_Load(object sender, EventArgs e) {
-            GetData();
+            //GetData();
         }
 
         public void GetData() {
