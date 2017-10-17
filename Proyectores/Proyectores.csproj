@@ -64,11 +64,28 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="PresentationCore" />
+    <Reference Include="Syncfusion.Grid.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Grouping.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Grouping.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grouping.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Linq.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.PivotAnalysis.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.PivotAnalysis.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Schedule.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Schedule.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.Shared.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Base, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=15.3460.0.26, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +95,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +113,19 @@
     <Compile Include="Components\MTextBox_Edit.Designer.cs">
       <DependentUpon>MTextBox_Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ABM\InicioGrilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\InicioGrilla.Designer.cs">
+      <DependentUpon>InicioGrilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ABM\ReservasGrilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\ReservasGrilla.Designer.cs">
+      <DependentUpon>ReservasGrilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IForms.cs" />
     <Compile Include="Forms\ABM\PersonasForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +156,19 @@
     <Compile Include="Forms\ABM\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Busquedas\LocalidadesBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Busquedas\LocalidadesBusqueda.Designer.cs">
+      <DependentUpon>LocalidadesBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IGrilla.cs" />
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,9 +189,14 @@
     </Compile>
     <Compile Include="Model\Entities\LocalidadesEntity.cs" />
     <Compile Include="Model\Entities\PersonasEntity.cs" />
+    <Compile Include="Model\Entities\PrestamosEntity.cs" />
     <Compile Include="Model\Entities\ProvinciasEntity.cs" />
     <Compile Include="Model\Entities\ProyectoresEntity.cs" />
+    <Compile Include="Model\Entities\ReservasEntity.cs" />
     <Compile Include="Model\Localidades.cs">
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MotivoBajaReserva.cs">
       <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Personas.cs">
@@ -162,19 +212,19 @@
       <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ProyectoresModel.Context.cs">
-      <DependentUpon>ProyectoresModel.Context.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoresModel.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ProyectoresModel.cs">
-      <DependentUpon>ProyectoresModel.tt</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\ProyectoresModel.Designer.cs">
-      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+      <DependentUpon>ProyectoresModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\Reserva.cs">
       <DependentUpon>ProyectoresModel.tt</DependentUpon>
@@ -196,6 +246,9 @@
     <EmbeddedResource Include="Components\MTextBox_Edit.resx">
       <DependentUpon>MTextBox_Edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\InicioGrilla.resx">
+      <DependentUpon>InicioGrilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\PersonasForm.resx">
       <DependentUpon>PersonasForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,8 +261,17 @@
     <EmbeddedResource Include="Forms\ABM\ProyectoresGrilla.resx">
       <DependentUpon>ProyectoresGrilla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\ReservasGrilla.resx">
+      <DependentUpon>ReservasGrilla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\test.resx">
       <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Busquedas\LocalidadesBusqueda.resx">
+      <DependentUpon>LocalidadesBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -248,6 +310,7 @@
     <None Include="Properties\DataSources\Modelo.Model.Tipo_Documento.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.LocalidadesEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.PersonasEntity.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Model.Entities.PrestamosEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.ProvinciasEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.ProyectoresEntity1.datasource" />
     <None Include="Properties\Settings.settings">
@@ -265,7 +328,9 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sign-add.png" />
     <None Include="Resources\pencil.png" />
@@ -274,6 +339,18 @@
     <Content Include="bin\Debug\db\Proyectores_log.ldf">
       <DependentUpon>Proyectores.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\profile-group.png" />
+    <None Include="Resources\calendar-clock.png" />
+    <None Include="Resources\box-in.png" />
+    <None Include="Resources\cog.png" />
+    <None Include="Resources\file-video.png" />
+    <None Include="Resources\floppy.png" />
+    <None Include="Resources\house.png" />
+    <None Include="Resources\sign-delete.png" />
+    <None Include="Resources\sign-error.png" />
+    <None Include="Resources\user-male.png" />
+    <None Include="Resources\wrench.png" />
+    <None Include="Resources\house1.png" />
     <Content Include="Model\ProyectoresModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ProyectoresModel.edmx</DependentUpon>
@@ -284,12 +361,19 @@
       <DependentUpon>ProyectoresModel.edmx</DependentUpon>
       <LastGenOutput>ProyectoresModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Proyectores.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Proyectores_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Proyectores.mdf</DependentUpon>
+    </Content>
     <Content Include="Symbol of the Gods.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

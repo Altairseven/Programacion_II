@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyectores.Model.Entities;
-using Modelo.Model;
+using Proyectores.Model;
 
 namespace Proyectores.Forms.ABM {
-    public partial class LocalidadGrilla : Form{
+    public partial class LocalidadGrilla : Form, IGrilla {
         public LocalidadGrilla() {
             InitializeComponent();
+            
         }
+
+
 
         //Referencia al Modelo
         private ProyectoresModelEntities _db = new ProyectoresModelEntities();
@@ -22,9 +25,45 @@ namespace Proyectores.Forms.ABM {
         private List<LocalidadesEntity> List;
 
         private void LocalidadGrilla_Load(object sender, EventArgs e) {
-          //  GetData();
+            this.ParentForm.KeyUp += new KeyEventHandler(this.HotKey_Listener);
         }
+        
+        private void HotKey_Listener(object sender, KeyEventArgs e) {
+            switch (e.KeyCode) {
+                case Keys.F2:
+                    if (e.Modifiers == Keys.None) OpenForm(false);
+                    break;
+                case Keys.F3:
+                    if (e.Modifiers == Keys.None) OpenForm(true);
+                    break;
+                case Keys.F4:
+                    if (e.Modifiers == Keys.None) DelBT_Click(sender, new EventArgs());
+                    break;
+                case Keys.F:
+                    if (e.Modifiers == Keys.Control) Search_TB.Focus();
+                    break;
+                default:
+                    break;
+            }
 
+            //switch (e.KeyData) {
+            //    case Keys.F2:
+            //        OpenForm(false);
+            //        break;
+            //    case Keys.F3:
+            //        OpenForm(true);
+            //        break;
+            //    case Keys.F4:
+            //        DelBT_Click(sender, new EventArgs());
+            //        break;
+            //    case Keys.F | Keys.Control:
+            //        Search_TB.Focus();
+            //        break;
+            //    default:
+            //        break;
+            //}
+
+        }
 
         //este metodo va a manejar tanto la obtencion de datos desde la tabla, como la busqueda en los mismo
         public void GetData(){
@@ -194,6 +233,8 @@ namespace Proyectores.Forms.ABM {
         private void dataGridView1_DoubleClick(object sender, EventArgs e) {
             OpenForm(true);
         }
+
+
 
 
     }

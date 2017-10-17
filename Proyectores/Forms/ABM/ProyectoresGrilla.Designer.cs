@@ -24,6 +24,9 @@
         /// </summary>
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Search_TB = new System.Windows.Forms.TextBox();
             this.DelBT = new System.Windows.Forms.Button();
             this.EditBT = new System.Windows.Forms.Button();
@@ -31,7 +34,6 @@
             this.Lb_Info = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.proyectoresEntityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +44,7 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.proyectoresEntityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.proyectoresEntityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -49,19 +52,19 @@
             // Search_TB
             // 
             this.Search_TB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search_TB.Location = new System.Drawing.Point(883, 8);
+            this.Search_TB.Location = new System.Drawing.Point(993, 10);
             this.Search_TB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Search_TB.Name = "Search_TB";
-            this.Search_TB.Size = new System.Drawing.Size(165, 22);
+            this.Search_TB.Size = new System.Drawing.Size(185, 26);
             this.Search_TB.TabIndex = 14;
             // 
             // DelBT
             // 
             this.DelBT.Image = global::Proyectores.Properties.Resources.trashcan;
-            this.DelBT.Location = new System.Drawing.Point(258, 304);
+            this.DelBT.Location = new System.Drawing.Point(290, 380);
             this.DelBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DelBT.Name = "DelBT";
-            this.DelBT.Size = new System.Drawing.Size(114, 38);
+            this.DelBT.Size = new System.Drawing.Size(128, 48);
             this.DelBT.TabIndex = 13;
             this.DelBT.Text = "Eliminar";
             this.DelBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -71,10 +74,10 @@
             // EditBT
             // 
             this.EditBT.Image = global::Proyectores.Properties.Resources.pencil;
-            this.EditBT.Location = new System.Drawing.Point(137, 304);
+            this.EditBT.Location = new System.Drawing.Point(154, 380);
             this.EditBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EditBT.Name = "EditBT";
-            this.EditBT.Size = new System.Drawing.Size(114, 38);
+            this.EditBT.Size = new System.Drawing.Size(128, 48);
             this.EditBT.TabIndex = 12;
             this.EditBT.Text = "Editar";
             this.EditBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -84,10 +87,10 @@
             // AgregarBT
             // 
             this.AgregarBT.Image = global::Proyectores.Properties.Resources.sign_add;
-            this.AgregarBT.Location = new System.Drawing.Point(16, 304);
+            this.AgregarBT.Location = new System.Drawing.Point(18, 380);
             this.AgregarBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AgregarBT.Name = "AgregarBT";
-            this.AgregarBT.Size = new System.Drawing.Size(114, 38);
+            this.AgregarBT.Size = new System.Drawing.Size(128, 48);
             this.AgregarBT.TabIndex = 11;
             this.AgregarBT.Text = "Agregar";
             this.AgregarBT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -98,10 +101,10 @@
             // Lb_Info
             // 
             this.Lb_Info.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Lb_Info.Location = new System.Drawing.Point(512, 296);
+            this.Lb_Info.Location = new System.Drawing.Point(576, 380);
             this.Lb_Info.Name = "Lb_Info";
             this.Lb_Info.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Lb_Info.Size = new System.Drawing.Size(538, 28);
+            this.Lb_Info.Size = new System.Drawing.Size(605, 35);
             this.Lb_Info.TabIndex = 10;
             this.Lb_Info.Text = "<Entries>";
             this.Lb_Info.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -110,9 +113,9 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(817, 11);
+            this.label1.Location = new System.Drawing.Point(919, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 9;
             this.label1.Text = "Buscar:";
             // 
@@ -139,7 +142,7 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn10});
             this.dataGridView1.DataSource = this.proyectoresEntityBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 40);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 50);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
@@ -147,12 +150,8 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1032, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(1161, 318);
             this.dataGridView1.TabIndex = 8;
-            // 
-            // proyectoresEntityBindingSource
-            // 
-            this.proyectoresEntityBindingSource.DataSource = typeof(Proyectores.Model.Entities.ProyectoresEntity);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -175,6 +174,7 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Modelo";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -195,6 +195,8 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "HDMIstr";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewTextBoxColumn8.HeaderText = "Hdmi";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -210,9 +212,12 @@
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.DataPropertyName = "DISPONIBLEstr";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewTextBoxColumn9.HeaderText = "Disponible";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 120;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -225,16 +230,22 @@
             // dataGridViewTextBoxColumn10
             // 
             this.dataGridViewTextBoxColumn10.DataPropertyName = "OPERATIVOstr";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.BottomCenter;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewTextBoxColumn10.HeaderText = "Estado";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 120;
             // 
+            // proyectoresEntityBindingSource
+            // 
+            this.proyectoresEntityBindingSource.DataSource = typeof(Proyectores.Model.Entities.ProyectoresEntity);
+            // 
             // ProyectoresGrilla
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 364);
+            this.ClientSize = new System.Drawing.Size(1194, 455);
             this.Controls.Add(this.Search_TB);
             this.Controls.Add(this.DelBT);
             this.Controls.Add(this.EditBT);

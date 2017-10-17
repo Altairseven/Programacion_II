@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Modelo.Model;
+using Proyectores.Model;
 using Proyectores.Model.Entities;
 
 namespace Proyectores.Forms.ABM {
@@ -107,7 +107,7 @@ namespace Proyectores.Forms.ABM {
                 BT_Cancel_Click(sender, e);
             }
 
-
+            
 
         }
 

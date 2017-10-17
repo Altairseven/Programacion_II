@@ -1,0 +1,3 @@
+﻿SET IDENTITY_INSERT [dbo].[Prestamos] ON
+INSERT INTO [dbo].[Prestamos] ([ID], [ID_PROYECTOR], [ID_SALON], [ID_PERSONA], [ID_RESERVA], [FECHA], [H_DESDE], [H_HASTA], [ACTIVO]) VALUES (CAST(2 AS Decimal(18, 0)), CAST(3 AS Decimal(18, 0)), CAST(3 AS Decimal(18, 0)), CAST(4 AS Decimal(18, 0)), CAST(4 AS Decimal(18, 0)), N'2017-10-16 00:00:00', N'2017-10-17 08:10:00', N'2017-10-17 09:40:00', 0)
+SET IDENTITY_INSERT [dbo].[Prestamos] OFF

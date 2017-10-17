@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Modelo.Model
+namespace Proyectores.Model
 {
     using System;
     using System.Data.Entity;
@@ -25,14 +25,15 @@ namespace Modelo.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Tipo_Documento> Tipo_Documento { get; set; }
+        public virtual DbSet<Localidades> Localidades { get; set; }
+        public virtual DbSet<MotivoBajaReserva> MotivoBajaReserva { get; set; }
         public virtual DbSet<Personas> Personas { get; set; }
         public virtual DbSet<Prestamos> Prestamos { get; set; }
+        public virtual DbSet<Provincias> Provincias { get; set; }
         public virtual DbSet<Proyectores> Proyectores { get; set; }
         public virtual DbSet<Reserva> Reserva { get; set; }
         public virtual DbSet<Salones> Salones { get; set; }
+        public virtual DbSet<Tipo_Documento> Tipo_Documento { get; set; }
         public virtual DbSet<Tipos_Persona> Tipos_Persona { get; set; }
-        public virtual DbSet<Provincias> Provincias { get; set; }
-        public virtual DbSet<Localidades> Localidades { get; set; }
     }
 }

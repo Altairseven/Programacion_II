@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Modelo.Model
+namespace Proyectores.Model
 {
     using System;
     using System.Collections.Generic;
@@ -15,12 +15,13 @@ namespace Modelo.Model
     public partial class Reserva
     {
         public decimal ID { get; set; }
-        public System.DateTime FECHA { get; set; }
         public decimal ID_SALON { get; set; }
-        public decimal TIPO_PERSONA { get; set; }
-        public Nullable<decimal> ID_PERSONAL { get; set; }
-        public Nullable<decimal> ID_ALUMNO { get; set; }
-        public Nullable<System.DateTime> FECHA_CANCELACION { get; set; }
+        public decimal ID_PERSONA { get; set; }
+        public System.DateTime FECHA_RESERVA { get; set; }
+        public System.DateTime FECHA_ALTA { get; set; }
         public Nullable<System.DateTime> FECHA_BAJA { get; set; }
+        public Nullable<decimal> ID_MOTIVO_BAJA { get; set; }
+        public System.DateTime H_DESDE { get; set; }
+        public System.DateTime H_HASTA { get; set; }
     }
 }

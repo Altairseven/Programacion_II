@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Modelo.Model;
+using Proyectores.Model;
 using Proyectores.Model.Entities;
 using Proyectores.Forms.ABM;
 using System.Windows.Input;
@@ -74,8 +74,12 @@ namespace Proyectores.Forms {
         private void tabControl1_TabIndexChanged(object sender, EventArgs e) {
             if (((TabControl)sender).TabCount <= 0)
                 tabControl1.Hide();
-            else
+            else {
                 tabControl1.Show();
+
+
+
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e) {
@@ -111,6 +115,10 @@ namespace Proyectores.Forms {
                 
             else
                 tabControl1.Show();
+        }
+
+        private void HotKey_Listener(object sender, System.Windows.Forms.KeyEventArgs e) {
+
         }
 
 

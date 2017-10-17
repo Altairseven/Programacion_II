@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Modelo.Model;
+using Proyectores.Model;
 
 namespace Proyectores.Model.Entities {
     public class ProyectoresEntity {
@@ -24,7 +24,7 @@ namespace Proyectores.Model.Entities {
 
         }
 
-        public ProyectoresEntity(Modelo.Model.Proyectores x) {
+        public ProyectoresEntity(Proyectores x) {
             ID = x.ID;
             MARCA = x.MARCA;
             SERIAL = x.SERIAL;

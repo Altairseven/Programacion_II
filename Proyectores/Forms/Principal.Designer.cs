@@ -42,6 +42,7 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TabCloseBT = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.localidadesEntityBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.localidadesEntityBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -53,18 +54,16 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1189, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1060, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 559);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 450);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1189, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1060, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -73,8 +72,7 @@
             this.treeView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.treeView1.Location = new System.Drawing.Point(9, 40);
-            this.treeView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.treeView1.Location = new System.Drawing.Point(8, 32);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "Personas";
             treeNode1.Text = "Personas";
@@ -93,7 +91,7 @@
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode5,
             treeNode7});
-            this.treeView1.Size = new System.Drawing.Size(207, 508);
+            this.treeView1.Size = new System.Drawing.Size(184, 407);
             this.treeView1.TabIndex = 2;
             this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick);
             // 
@@ -102,11 +100,11 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Location = new System.Drawing.Point(225, 40);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabControl1.Location = new System.Drawing.Point(200, 32);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(961, 511);
+            this.tabControl1.Size = new System.Drawing.Size(854, 409);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
@@ -114,13 +112,23 @@
             // TabCloseBT
             // 
             this.TabCloseBT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TabCloseBT.Location = new System.Drawing.Point(1128, 0);
+            this.TabCloseBT.Location = new System.Drawing.Point(1003, 0);
+            this.TabCloseBT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TabCloseBT.Name = "TabCloseBT";
-            this.TabCloseBT.Size = new System.Drawing.Size(59, 32);
+            this.TabCloseBT.Size = new System.Drawing.Size(52, 26);
             this.TabCloseBT.TabIndex = 5;
             this.TabCloseBT.Text = "X";
             this.TabCloseBT.UseVisualStyleBackColor = true;
             this.TabCloseBT.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "house.png");
+            this.imageList1.Images.SetKeyName(1, "calendar-clock.png");
+            this.imageList1.Images.SetKeyName(2, "file-video.png");
+            this.imageList1.Images.SetKeyName(3, "user-male.png");
             // 
             // localidadesEntityBindingSource
             // 
@@ -128,21 +136,22 @@
             // 
             // Principal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1189, 581);
+            this.ClientSize = new System.Drawing.Size(1060, 472);
             this.Controls.Add(this.TabCloseBT);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(1211, 637);
+            this.MinimumSize = new System.Drawing.Size(1078, 519);
             this.Name = "Principal";
-            this.Text = "Form1";
+            this.Text = "Proyectores";
             this.Load += new System.EventHandler(this.Principal_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.HotKey_Listener);
             ((System.ComponentModel.ISupportInitialize)(this.localidadesEntityBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,6 +166,7 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Button TabCloseBT;
         private System.Windows.Forms.BindingSource localidadesEntityBindingSource;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
 

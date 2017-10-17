@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Modelo.Model;
+using Proyectores.Model;
 using Proyectores.Model.Entities;
 
 
 namespace Proyectores.Forms.ABM {
-    public partial class ProyectoresGrilla : Form {
+    public partial class ProyectoresGrilla : Form, IGrilla {
         public ProyectoresGrilla() {
             InitializeComponent();
         }
@@ -36,7 +36,7 @@ namespace Proyectores.Forms.ABM {
 
             
 
-            foreach (Modelo.Model.Proyectores q in query) {
+            foreach (Model.Proyectores q in query) {
                 ProyectoresEntity item = new ProyectoresEntity(q);
                 if (item.DISPONIBLE == 1) item.DISPONIBLEstr = "Si";
                 else item.DISPONIBLEstr = "No";

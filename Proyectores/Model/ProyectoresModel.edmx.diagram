@@ -4,16 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0c6b79acdf55420cbae614336c668cec" Name="Diagram1">
-        <EntityTypeShape EntityType="ProyectoresModel.Tipo_Documento" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ProyectoresModel.Personas" Width="1.5" PointX="3.75" PointY="0.75" />
-        <EntityTypeShape EntityType="ProyectoresModel.Prestamos" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="ProyectoresModel.Proyectores" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="ProyectoresModel.Reserva" Width="1.5" PointX="5.75" PointY="3.75" />
-        <EntityTypeShape EntityType="ProyectoresModel.Salones" Width="1.5" PointX="7.75" PointY="0.75" />
-        <EntityTypeShape EntityType="ProyectoresModel.Tipos_Persona" Width="1.5" PointX="7.75" PointY="3.75" />
-        <EntityTypeShape EntityType="ProyectoresModel.Provincias" Width="1.5" PointX="3.375" PointY="7.75" />
-        <EntityTypeShape EntityType="ProyectoresModel.Localidades" Width="1.5" PointX="0.75" PointY="0.75" />
+      <Diagram DiagramId="58ea61d5950840889f9de3f871a590c0" Name="Diagram1">
+        <EntityTypeShape EntityType="ProyectoresModel.Localidades" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.MotivoBajaReserva" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.Personas" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.Prestamos" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.Provincias" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.Proyectores" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.Reserva" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.Salones" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.Tipo_Documento" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProyectoresModel.Tipos_Persona" Width="1.5" PointX="4.75" PointY="7.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

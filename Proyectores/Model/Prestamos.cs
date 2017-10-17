@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Modelo.Model
+namespace Proyectores.Model
 {
     using System;
     using System.Collections.Generic;
@@ -17,8 +17,11 @@ namespace Modelo.Model
         public decimal ID { get; set; }
         public decimal ID_PROYECTOR { get; set; }
         public decimal ID_SALON { get; set; }
-        public decimal TIPO_PERSONA { get; set; }
-        public decimal ID_PERSONAL { get; set; }
-        public decimal ID_ALUMNO { get; set; }
+        public decimal ID_PERSONA { get; set; }
+        public Nullable<decimal> ID_RESERVA { get; set; }
+        public System.DateTime FECHA { get; set; }
+        public System.DateTime H_DESDE { get; set; }
+        public System.DateTime H_HASTA { get; set; }
+        public int ACTIVO { get; set; }
     }
 }

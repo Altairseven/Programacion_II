@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Modelo.Model
+namespace Proyectores.Model
 {
     using System;
     using System.Collections.Generic;
