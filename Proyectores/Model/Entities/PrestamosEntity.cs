@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Proyectores.Model.Entities {
-    class PrestamosEntity {
+    public class PrestamosEntity {
 
         public decimal ID { get; set; }
         public decimal ID_PROYECTOR { get; set; }
@@ -38,6 +38,8 @@ namespace Proyectores.Model.Entities {
             ID_RESERVA = x.ID_RESERVA;
             H_DESDE = x.H_DESDE;
             H_HASTA = x.H_HASTA;
+            DesdeSrt = x.H_DESDE.ToShortTimeString();
+            HastaSrt = x.H_HASTA.ToShortTimeString();
             ACTIVO = x.ACTIVO;
             FECHA = x.FECHA;
         }

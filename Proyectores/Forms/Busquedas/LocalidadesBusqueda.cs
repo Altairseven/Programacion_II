@@ -15,14 +15,14 @@ namespace Proyectores.Forms.Busquedas {
 
         ProyectoresModelEntities _db = new ProyectoresModelEntities();
         List<LocalidadesEntity> List;
-        IForms Pform;
+        IFormLocalidades Pform;
 
 
         public LocalidadesBusqueda() {
             InitializeComponent();
         }
 
-        public LocalidadesBusqueda(IForms _pform) {
+        public LocalidadesBusqueda(IFormLocalidades _pform) {
             InitializeComponent();
             Pform = _pform;
             Search_TB.Focus();
@@ -78,14 +78,21 @@ namespace Proyectores.Forms.Busquedas {
         private void OnGrid_KeyDown(object sender, KeyEventArgs e) {
             if (e.KeyCode != Keys.Enter || e.KeyCode != Keys.Return)
                 return;
+            SelectAndSend();
+        }
 
+        private void dataGridView1_Click(object sender, EventArgs e) {
+            SelectAndSend();
+        }
 
+        private void SelectAndSend() {
             Pform.Loc_ID = (decimal)dataGridView1.SelectedRows[0].Cells[0].Value;
             Pform.COD_Postal = (decimal)dataGridView1.SelectedRows[0].Cells[1].Value;
             Pform.Loc_Nombre = (string)dataGridView1.SelectedRows[0].Cells[2].Value;
             this.Hide();
             this.Dispose();
-
         }
+
+
     }
 }

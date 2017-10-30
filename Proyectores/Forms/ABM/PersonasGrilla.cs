@@ -19,7 +19,7 @@ namespace Proyectores.Forms.ABM
         {
             InitializeComponent();
         }
-        private ProyectoresModelEntities _db = new ProyectoresModelEntities();
+        private ProyectoresModelEntities _db;
         private List<PersonasEntity> List;
 
         private void PersonasGrilla_Load(object sender, EventArgs e) {
@@ -65,9 +65,9 @@ namespace Proyectores.Forms.ABM
 
         }
 
-        public void GetData()
-        {
-            List=new List<PersonasEntity> ();
+        public void GetData() {
+            _db = new ProyectoresModelEntities();
+            List =new List<PersonasEntity> ();
 
             string query = " select a.*, b.NOMBRE as DOCNOMBRE, c.NOMBRE as LOCNOMBRE, d.NOMBRE AS TIPO_PERSONA, " +
                 "CONCAT(a.APELLIDO, ', ', a.NOMBRE) as APE_NOM " + 
@@ -154,6 +154,8 @@ namespace Proyectores.Forms.ABM
         }
 
         private string DB_Delete() {
+            _db = new ProyectoresModelEntities();
+
             string response = "";
             decimal id = (decimal)dataGridView1.SelectedRows[0].Cells[0].Value;
             try {

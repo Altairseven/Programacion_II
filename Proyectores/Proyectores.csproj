@@ -101,6 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Db_ComboItem.cs" />
+    <Compile Include="Classes\ReportQueries.cs" />
+    <Compile Include="Classes\ReportTypes.cs" />
     <Compile Include="Components\DB_ComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -113,11 +115,35 @@
     <Compile Include="Components\MTextBox_Edit.Designer.cs">
       <DependentUpon>MTextBox_Edit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ABM\HistorialGrilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\HistorialGrilla.Designer.cs">
+      <DependentUpon>HistorialGrilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ABM\InicioFormNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\InicioFormNew.Designer.cs">
+      <DependentUpon>InicioFormNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ABM\InicioGrilla.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\ABM\InicioGrilla.Designer.cs">
       <DependentUpon>InicioGrilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ABM\InicioFormAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\InicioFormAlta.Designer.cs">
+      <DependentUpon>InicioFormAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ABM\ReservasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ABM\ReservasForm.Designer.cs">
+      <DependentUpon>ReservasForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ABM\ReservasGrilla.cs">
       <SubType>Form</SubType>
@@ -125,7 +151,21 @@
     <Compile Include="Forms\ABM\ReservasGrilla.Designer.cs">
       <DependentUpon>ReservasGrilla.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\IForms.cs" />
+    <Compile Include="Forms\Busquedas\IFormSalones.cs" />
+    <Compile Include="Forms\Busquedas\IFormPersonas.cs" />
+    <Compile Include="Forms\Busquedas\SalonesBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Busquedas\SalonesBusqueda.Designer.cs">
+      <DependentUpon>SalonesBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Busquedas\PersonasBusqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Busquedas\PersonasBusqueda.Designer.cs">
+      <DependentUpon>PersonasBusqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Busquedas\IFormLocalidades.cs" />
     <Compile Include="Forms\ABM\PersonasForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,12 +190,6 @@
     <Compile Include="Forms\ABM\ProyectoresGrilla.Designer.cs">
       <DependentUpon>ProyectoresGrilla.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ABM\test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\ABM\test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Busquedas\LocalidadesBusqueda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +197,12 @@
       <DependentUpon>LocalidadesBusqueda.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\IGrilla.cs" />
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +233,7 @@
     <Compile Include="Model\Entities\ProvinciasEntity.cs" />
     <Compile Include="Model\Entities\ProyectoresEntity.cs" />
     <Compile Include="Model\Entities\ReservasEntity.cs" />
+    <Compile Include="Model\Entities\SalonesEntity.cs" />
     <Compile Include="Model\Localidades.cs">
       <DependentUpon>ProyectoresModel.tt</DependentUpon>
     </Compile>
@@ -246,6 +287,12 @@
     <EmbeddedResource Include="Components\MTextBox_Edit.resx">
       <DependentUpon>MTextBox_Edit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\HistorialGrilla.resx">
+      <DependentUpon>HistorialGrilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\InicioFormNew.resx">
+      <DependentUpon>InicioFormNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\InicioGrilla.resx">
       <DependentUpon>InicioGrilla.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,20 +302,32 @@
     <EmbeddedResource Include="Forms\ABM\PersonasGrilla.resx">
       <DependentUpon>PersonasGrilla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\InicioFormAlta.resx">
+      <DependentUpon>InicioFormAlta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\ProyectoresForm.resx">
       <DependentUpon>ProyectoresForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\ProyectoresGrilla.resx">
       <DependentUpon>ProyectoresGrilla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ABM\ReservasForm.resx">
+      <DependentUpon>ReservasForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ABM\ReservasGrilla.resx">
       <DependentUpon>ReservasGrilla.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ABM\test.resx">
-      <DependentUpon>test.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Busquedas\SalonesBusqueda.resx">
+      <DependentUpon>SalonesBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Busquedas\PersonasBusqueda.resx">
+      <DependentUpon>PersonasBusqueda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Busquedas\LocalidadesBusqueda.resx">
       <DependentUpon>LocalidadesBusqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -308,11 +367,17 @@
     </None>
     <None Include="Properties\DataSources\Modelo.Model.Tipos_Persona.datasource" />
     <None Include="Properties\DataSources\Modelo.Model.Tipo_Documento.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Classes.ReportMode.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Classes.ReportType.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.LocalidadesEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.PersonasEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.PrestamosEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.ProvinciasEntity.datasource" />
     <None Include="Properties\DataSources\Proyectores.Model.Entities.ProyectoresEntity1.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Model.Entities.ReservasEntity.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Model.Entities.SalonesEntity.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Model.Proyectores.datasource" />
+    <None Include="Properties\DataSources\Proyectores.Model.Tipos_Persona.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -361,13 +426,9 @@
       <DependentUpon>ProyectoresModel.edmx</DependentUpon>
       <LastGenOutput>ProyectoresModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Proyectores.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Proyectores_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Proyectores.mdf</DependentUpon>
-    </Content>
+    <None Include="Resources\magnify.png" />
+    <None Include="Resources\magnify1.png" />
+    <None Include="Resources\sign-ban.png" />
     <Content Include="Symbol of the Gods.ico" />
   </ItemGroup>
   <ItemGroup>

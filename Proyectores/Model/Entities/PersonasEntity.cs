@@ -36,6 +36,7 @@ namespace Proyectores.Model.Entities {
         public string TIPO_PERSONA { get; set; }
         public string APE_NOM { get; set; }
         public string DOCUMENTO_FULL { get; set; }
+        public string BusquedaContent { get; set; }
 
         public PersonasEntity() {
             new PersonasEntity(new Personas());

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Proyectores.Model;
 
 namespace Proyectores.Model.Entities {
-    class ReservasEntity {
+    public class ReservasEntity {
 
         public decimal ID { get; set; }
         public decimal ID_SALON { get; set; }
@@ -17,6 +17,13 @@ namespace Proyectores.Model.Entities {
         public decimal? ID_MOTIVO_BAJA { get; set; }
         public DateTime H_DESDE { get; set; }
         public DateTime H_HASTA { get; set; }
+        public string H_DESDEsrt { get; set; }
+        public string H_HASTAsrt { get; set; }
+        public string NOMBRE_TIPO_PERSONA { get; set; }
+        public string APE_NOM { get; set; }
+        public string NOMBRE_SALON { get; set; }
+
+
 
         public ReservasEntity() {
 
@@ -32,6 +39,8 @@ namespace Proyectores.Model.Entities {
             ID_MOTIVO_BAJA = x.ID_MOTIVO_BAJA;
             H_DESDE = x.H_DESDE;
             H_HASTA = x.H_HASTA;
+            H_DESDEsrt = x.H_DESDE.ToShortTimeString();
+            H_HASTAsrt = x.H_HASTA.ToShortTimeString();
         }
     }
 }

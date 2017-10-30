@@ -18,6 +18,8 @@ namespace Proyectores.Model.Entities {
         public string HDMIstr { get; set; }
         public string DISPONIBLEstr { get; set; }
         public string OPERATIVOstr { get; set; }
+        //usados para reportes
+        public string APE_NOM { get; set; }
 
 
         public ProyectoresEntity() {

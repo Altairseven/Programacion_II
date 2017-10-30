@@ -8,18 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyectores.Forms.ABM;
+using Syncfusion.Windows.Forms.Tools;
 
 namespace Proyectores.Forms {
     public partial class Main : Form {
         public Main() {
             InitializeComponent();
+            SetupTabs();
+        }
+
+        public Main(decimal userid) {
+            InitializeComponent();
+            SetupTabs();
         }
 
         private List<IGrilla> IForms;
 
         private void Main_Load(object sender, EventArgs e) {
 
-            SetupTabs();
+            
         }
 
         private void SetupTabs() {
@@ -60,8 +67,22 @@ namespace Proyectores.Forms {
             IGrilla IProyectores = Proyectores;
             IForms.Add(IProyectores);
 
+            HistorialGrilla Historial = new HistorialGrilla();
+            Historial.TopLevel = false;
+            Historial.FormBorderStyle = FormBorderStyle.None;
+            Historial.Dock = DockStyle.Fill;
+            TabAjustes.Controls.Add(Historial);
+            Historial.Show();
 
-
+            TabPageAdv[] tabs =  new TabPageAdv[]{
+                TabInicio,
+                TabReservas,
+                TabPersonas,
+                TabProyectores,
+                TabAjustes
+            };
+            TB_Control.Controls.Clear();
+            TB_Control.Controls.AddRange(tabs);
 
 
         }
@@ -72,7 +93,13 @@ namespace Proyectores.Forms {
 
         private void TB_Control_SelectedIndexChanged(object sender, EventArgs e) {
             int index = TB_Control.SelectedIndex;
-            IForms[index].GetData();
+            if (index <= IForms.Count -1)
+                IForms[index].GetData();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            HistorialGrilla g = new HistorialGrilla();
+            g.Show();
         }
     }
 }

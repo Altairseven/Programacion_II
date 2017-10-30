@@ -27,10 +27,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.TB_Control = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.TabInicio = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.TabReservas = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.TabPersonas = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.TabProyectores = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.TabAjustes = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.TabReservas = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.TabPersonas = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.TB_Control)).BeginInit();
             this.TB_Control.SuspendLayout();
@@ -87,6 +87,34 @@
             this.TabInicio.Text = "  Inicio";
             this.TabInicio.ThemesEnabled = false;
             // 
+            // TabProyectores
+            // 
+            this.TabProyectores.Image = null;
+            this.TabProyectores.ImageIndex = 3;
+            this.TabProyectores.ImageSize = new System.Drawing.Size(16, 16);
+            this.TabProyectores.Location = new System.Drawing.Point(0, 40);
+            this.TabProyectores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TabProyectores.Name = "TabProyectores";
+            this.TabProyectores.ShowCloseButton = true;
+            this.TabProyectores.Size = new System.Drawing.Size(1233, 704);
+            this.TabProyectores.TabIndex = 4;
+            this.TabProyectores.Text = "  Proyectores";
+            this.TabProyectores.ThemesEnabled = false;
+            // 
+            // TabAjustes
+            // 
+            this.TabAjustes.Image = null;
+            this.TabAjustes.ImageIndex = 7;
+            this.TabAjustes.ImageSize = new System.Drawing.Size(16, 16);
+            this.TabAjustes.Location = new System.Drawing.Point(0, 40);
+            this.TabAjustes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TabAjustes.Name = "TabAjustes";
+            this.TabAjustes.ShowCloseButton = true;
+            this.TabAjustes.Size = new System.Drawing.Size(1233, 704);
+            this.TabAjustes.TabIndex = 5;
+            this.TabAjustes.Text = " Historial";
+            this.TabAjustes.ThemesEnabled = false;
+            // 
             // TabReservas
             // 
             this.TabReservas.Image = null;
@@ -115,34 +143,6 @@
             this.TabPersonas.Text = "  Personas";
             this.TabPersonas.ThemesEnabled = false;
             // 
-            // TabProyectores
-            // 
-            this.TabProyectores.Image = null;
-            this.TabProyectores.ImageIndex = 3;
-            this.TabProyectores.ImageSize = new System.Drawing.Size(16, 16);
-            this.TabProyectores.Location = new System.Drawing.Point(0, 40);
-            this.TabProyectores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TabProyectores.Name = "TabProyectores";
-            this.TabProyectores.ShowCloseButton = true;
-            this.TabProyectores.Size = new System.Drawing.Size(1233, 704);
-            this.TabProyectores.TabIndex = 4;
-            this.TabProyectores.Text = "  Proyectores";
-            this.TabProyectores.ThemesEnabled = false;
-            // 
-            // TabAjustes
-            // 
-            this.TabAjustes.Image = null;
-            this.TabAjustes.ImageIndex = 5;
-            this.TabAjustes.ImageSize = new System.Drawing.Size(16, 16);
-            this.TabAjustes.Location = new System.Drawing.Point(0, 40);
-            this.TabAjustes.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TabAjustes.Name = "TabAjustes";
-            this.TabAjustes.ShowCloseButton = true;
-            this.TabAjustes.Size = new System.Drawing.Size(1233, 704);
-            this.TabAjustes.TabIndex = 5;
-            this.TabAjustes.Text = "  Ajustes";
-            this.TabAjustes.ThemesEnabled = false;
-            // 
             // imageList1
             // 
             this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
@@ -154,6 +154,7 @@
             this.imageList1.Images.SetKeyName(4, "wrench.png");
             this.imageList1.Images.SetKeyName(5, "wrench-screwdriver.png");
             this.imageList1.Images.SetKeyName(6, "file-video.png");
+            this.imageList1.Images.SetKeyName(7, "clock.png");
             // 
             // Main
             // 
@@ -161,6 +162,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1233, 744);
             this.Controls.Add(this.TB_Control);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1250, 788);

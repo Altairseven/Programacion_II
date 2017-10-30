@@ -12,7 +12,7 @@ using Proyectores.Model.Entities;
 
 namespace Proyectores.Forms.ABM
 {
-    public partial class PersonasForm : Form, IForms {
+    public partial class PersonasForm : Form, Busquedas.IFormLocalidades {
         private decimal? loc_id;
         public decimal? Loc_ID {
             get {
@@ -94,6 +94,14 @@ namespace Proyectores.Forms.ABM
 
         private void PersonasForm_Load(object sender, EventArgs e) {
             InitComboBoxes();
+            if (SelectedIndex == 0) {
+                BT_Primero.Enabled = false;
+                BT_Anterior.Enabled = false;
+            }
+            else if (SelectedIndex == List.Count - 1) {
+                BT_Proximo.Enabled = false;
+                BT_Ultimo.Enabled = false;
+            }
         }
         private void InitComboBoxes() {
             TipoDoc_CB.DataSource = _db.Tipo_Documento.ToList();
@@ -102,7 +110,7 @@ namespace Proyectores.Forms.ABM
 
         private void FeedData() {
             Nombre_TB.Text = List[SelectedIndex].NOMBRE;
-            Apellido_TB.Text = List[SelectedIndex].NOMBRE;
+            Apellido_TB.Text = List[SelectedIndex].APELLIDO;
             TipoDoc_CB.SelectedValue = List[SelectedIndex].ID_TIPO_DOCUMENTO;
             Documento_TB.Text = List[SelectedIndex].DOCUMENTO.ToString();
             cuit_TB.Text = List[SelectedIndex].CUIT.ToString();
@@ -116,7 +124,7 @@ namespace Proyectores.Forms.ABM
             email_TB.Text = List[SelectedIndex].EMAIL;
             telefono_TB.Text = List[SelectedIndex].TELEFONO;
 
-
+            Registro_LB.Text = "Registro " + (SelectedIndex + 1) + " de " + List.Count + ".";
         }
 
         private void BT_Save_Click(object sender, EventArgs e) {
@@ -131,7 +139,9 @@ namespace Proyectores.Forms.ABM
             if (Direccion_TB.Text == "") { MessageBox.Show("La Direccion no puede estar vacia."); return; }
             decimal a = 0;
             if (TipoDoc_CB.Text == "") { MessageBox.Show("El Tipo de documento no es valido."); return; }
-            if (Documento_TB.Text == "" && decimal.TryParse(TipoDoc_CB.Text, out a)) { MessageBox.Show("El Nro de documento no es valido."); return; }
+            if (Documento_TB.Text == "" && !decimal.TryParse(TipoDoc_CB.Text, out a)) { MessageBox.Show("El Nro de documento no es valido."); return; }
+            if (!decimal.TryParse(cuit_TB.Text, out a)) { MessageBox.Show("El CUIT, debe ser numerico"); return; }
+
 
             string response;
 
@@ -169,6 +179,8 @@ namespace Proyectores.Forms.ABM
                 Entity.DOCUMENTO = Convert.ToDecimal(Documento_TB.Text);
                 Entity.ID_TIPO_PERSONA = Convert.ToDecimal(Tipo_persona_CB.SelectedValue);
                 Entity.ID_LOCALIDAD = (decimal)Loc_ID;
+                Entity.CUIT = Convert.ToDecimal(cuit_TB.Text);
+                Entity.LEGAJO = legajo_TB.Text;
                 Entity.DIRECCION = Direccion_TB.Text;
                 Entity.TELEFONO = telefono_TB.Text;
                 Entity.EMAIL = email_TB.Text;
@@ -198,6 +210,8 @@ namespace Proyectores.Forms.ABM
                 Entity.DOCUMENTO = Convert.ToDecimal(Documento_TB.Text);
                 Entity.ID_TIPO_PERSONA = Convert.ToDecimal(Tipo_persona_CB.SelectedValue);
                 Entity.ID_LOCALIDAD = (decimal)Loc_ID;
+                Entity.CUIT = Convert.ToDecimal(cuit_TB.Text);
+                Entity.LEGAJO = legajo_TB.Text;
                 Entity.DIRECCION = Direccion_TB.Text;
                 Entity.TELEFONO = telefono_TB.Text;
                 Entity.EMAIL = email_TB.Text;
@@ -326,7 +340,7 @@ namespace Proyectores.Forms.ABM
             SelectedIndex += 1;
             if (SelectedIndex >= List.Count - 1) {
                 BT_Proximo.Enabled = false;
-                BT_Ultimo.Enabled = true;
+                BT_Ultimo.Enabled = false;
             }
         }
 
@@ -342,6 +356,12 @@ namespace Proyectores.Forms.ABM
             BT_Anterior.Enabled = true;
             BT_Proximo.Enabled = true;
             BT_Ultimo.Enabled = true;
+        }
+
+        private void BT_Cancel_Click(object sender, EventArgs e) {
+            this.Hide();
+            Grilla.GetData();
+            this.Dispose();
         }
     }
 }
